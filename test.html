@@ -1,0 +1,27 @@
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="wrapper"></div>
+    <script src="define.js?pro=./pro"></script>
+    <script>
+        define([
+            'pro/showWords.js',
+            'animate/list.js'
+        ],function(S,L){
+            
+            var l = new L();
+            
+            l
+                .add(new S(100,"1111111111",document.getElementById('wrapper')))
+                .add(new S(200,"222222222222",document.getElementById('wrapper')))
+                .add(new S(300,"33333333333333",document.getElementById('wrapper')))
+                .add(new S(400,"44444444",document.getElementById('wrapper')))
+                .add(new S(2000,"123456789",document.getElementById('wrapper')))
+                .start()
+            ;
+            
+            
+        });
+    </script>    
+</body>

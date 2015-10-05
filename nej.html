@@ -1,0 +1,38 @@
+<html>
+    <body></body>
+</html>
+<script src="./nej/src/define.js"></script>
+<script>
+    define([
+        'base/klass'
+    ],function(_k){
+        var _$$A = _k._$klass();
+        
+        var _$$C = _k._$klass();
+        
+        var _$$E = _k._$klass();
+        
+        
+        var _pro = _$$C._$extend(_$$A);
+        
+        _$$E._$extend(_$$C);
+        
+        _pro.__init = function(a,b){
+            this.__super();
+            console.log(a+" "+b);
+        };
+        
+        _pro.a = 1;
+        
+        _$$E.prototype.__init = function(a,b,c){
+            this.__super(a,b);
+            console.log(c);
+        };
+        
+        _$$E.prototype.a = 2;
+        
+        var c = new _$$C(1,2);
+        
+        var e= new _$$E(1,2,3);
+    });
+</script>
